@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Cuaderno Andino — Valle Sagrado y Cusco">
+  <rect width="512" height="512" rx="112" fill="#A64B2A"/>
+  <rect x="28" y="28" width="456" height="456" rx="88" fill="none" stroke="#FAF7F2" stroke-opacity="0.28" stroke-width="4"/>
+  <!-- Andean Sun -->
+  <circle cx="256" cy="176" r="44" fill="#C59B27"/>
+  <circle cx="256" cy="176" r="64" fill="none" stroke="#FAF7F2" stroke-opacity="0.45" stroke-width="3" stroke-dasharray="6 10"/>
+  <!-- Sacred Valley Terraces / Mountains -->
+  <path d="M84 358 L194 218 L272 308 L334 242 L428 358 Z" fill="#FAF7F2" fill-opacity="0.96"/>
+  <path d="M84 358 L194 218 L244 276 L192 358 Z" fill="#E8DFD3" fill-opacity="0.65"/>
+  <!-- Valley River Line -->
+  <path d="M116 392 Q200 374 256 392 T396 392" fill="none" stroke="#FAF7F2" stroke-width="10" stroke-linecap="round" stroke-opacity="0.85"/>
+</svg>

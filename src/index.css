@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --canvas-alabaster: #FAF7F2;
+    --surface-ivory: #FFFFFF;
+    --surface-linen: #F3EDE3;
+    --border-hairline: #E8E1D5;
+    --ink-obsidian: #171A18;
+    --ink-stone: #525854;
+    --ink-muted: #7A7F7B;
+    --accent-terracotta: #9E472A;
+    --accent-cypress: #2E4F3A;
+    --accent-brass: #B5892E;
+    --accent-slate: #334E5C;
+
+    --font-serif: 'Cormorant Garamond', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html.text-large {
+    font-size: 18px;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #EFEAE1;
+    color: var(--ink-obsidian);
+  }
+}
+
+.font-serif-editorial {
+  font-family: var(--font-serif);
+}
+
+/* Subtle luxury linen grain on main paper shell */
+.paper-canvas {
+  background-color: var(--canvas-alabaster);
+  background-image: radial-gradient(rgba(158, 71, 42, 0.028) 1px, transparent 0);
+  background-size: 26px 26px;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Silky Bottom Sheet motion */
+@keyframes sheetSlideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-sheet-up {
+  animation: sheetSlideUp 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: backdropFadeIn 0.22s ease-out forwards;
+}
+
+/* Boarding-pass perforation divider */
+.ticket-divider {
+  background-image: linear-gradient(to right, #DED6C9 50%, transparent 50%);
+  background-position: top;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+}
+
+/* Luxury Leaflet Map Styling */
+.leaflet-container {
+  font-family: var(--font-sans) !important;
+  background: #EDE8DF !important;
+}
+
+.custom-map-pin {
+  background: transparent;
+  border: none;
+}
+
+.pin-bubble {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  border: 2.5px solid #FAF7F2;
+  box-shadow: 0 5px 14px rgba(23, 26, 24, 0.26);
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pin-bubble.is-selected {
+  transform: scale(1.26);
+  box-shadow: 0 8px 22px rgba(23, 26, 24, 0.38);
+  z-index: 999;
+}
+
+.leaflet-control-attribution {
+  font-size: 9px !important;
+  background: rgba(250, 247, 242, 0.85) !important;
+  backdrop-filter: blur(4px);
+  border-radius: 6px 0 0 0;
+}
